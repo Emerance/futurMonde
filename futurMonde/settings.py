@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-a0m6q&c^d8bgs3)mvg-k8l9+zqc5bv7=or9rr+q6a1lwux_w&o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['futurmonde.onrender.com']
+ALLOWED_HOSTS = ['futurmonde.onrender.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -118,6 +118,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration

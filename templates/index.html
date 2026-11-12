@@ -4,10 +4,8 @@
 
 {% block content %}
 
-    <!-- 2. BANDEAU CLIGNOTANT D'INFO URGENTE (100% sans CSS externe) -->
     <div class="w-full max-w-[95%] mx-auto mt-4 p-4 bg-blue-50 rounded-2xl border border-blue-100 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-3">
-            <!-- Le signal lumineux clignotant -->
             <span class="flex h-3 w-3 relative">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                 <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-600"></span>
@@ -21,10 +19,8 @@
         </a>
     </div>
 
-    <!-- 3. SECTION HÉRO (Grande présentation de l'école) -->
     <section class="w-full max-w-[95%] mx-auto mt-6 bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
         <div class="flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16 gap-8">
-            <!-- Texte explicatif -->
             <div class="w-full lg:w-1/2 text-center lg:text-left">
                 <span class="bg-amber-100 text-amber-800 font-bold px-4 py-1.5 rounded-full text-sm inline-block mb-4">
                     🏫 Bienvenue à l'École Primaire
@@ -44,7 +40,7 @@
                     </a>
                 </div>
             </div>
-            <!-- Illustration de la vie scolaire -->
+
             <div class="w-full lg:w-1/2">
                 <img src="https://www.ecolechenee.be/wp-content/uploads/2023/04/groupe-eleves-primaire-travaillant-ensemble.jpg" 
                      alt="Enfants heureux en classe" 
@@ -53,14 +49,11 @@
         </div>
     </section>
 
-    <!-- SECTION AVEC EFFET FOND FIGÉ (PARALLAXE) -->
     <section class="w-full max-w-[95%] mx-auto mt-12 h-64 md:h-80 rounded-3xl relative overflow-hidden bg-cover bg-center bg-fixed shadow-inner" 
             style="background-image: url('https://www.ecolechenee.be/wp-content/uploads/2023/04/groupe-eleves-primaire-travaillant-ensemble.jpg');">
         
-        <!-- Voile sombre pour rendre le texte très lisible par-dessus l'image -->
         <div class="absolute inset-0 bg-gray-900/40 backdrop-blur-[2px]"></div>
 
-        <!-- Contenu au centre de la bannière -->
         <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
             <h2 class="text-2xl md:text-4xl font-extrabold text-white drop-shadow-md">
                 Chaque jour est une nouvelle aventure
@@ -71,16 +64,13 @@
         </div>
     </section>
 
-    <!-- 5. SECTION COMPLÉMENTAIRE : LES CHIFFRES CLÉS -->
     <section class="w-full max-w-[95%] mx-auto mt-12 py-10 px-6 bg-white rounded-3xl shadow-sm border border-gray-100">
         <div class="w-full max-w-[95%] mx-auto mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
         
-            <!-- SECTION A : LES ACCÈS RAPIDES PARENTS (2 colonnes sur grand écran) -->
             <div class="lg:col-span-2 space-y-6">
                 <h2 class="text-2xl font-bold text-gray-800 mb-4">Espace Pratique des Parents</h2>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <!-- Lien Cantine -->
                     <a href="#" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-100 hover:border-blue-500 hover:shadow-sm transition group">
                         <span class="text-3xl p-3 bg-blue-50 rounded-xl group-hover:bg-blue-100 transition">📅</span>
                         <div>
@@ -89,7 +79,6 @@
                         </div>
                     </a>
 
-                    <!-- Lien Calendrier -->
                     <a href="#" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-100 hover:border-green-500 hover:shadow-sm transition group">
                         <span class="text-3xl p-3 bg-green-50 rounded-xl group-hover:bg-green-100 transition">🎒</span>
                         <div>
@@ -98,7 +87,6 @@
                         </div>
                     </a>
 
-                    <!-- Lien Inscriptions -->
                     <a href="#" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-100 hover:border-amber-500 hover:shadow-sm transition group">
                         <span class="text-3xl p-3 bg-amber-50 rounded-xl group-hover:bg-amber-100 transition">📝</span>
                         <div>
@@ -107,7 +95,6 @@
                         </div>
                     </a>
 
-                    <!-- Lien Horaires & Garderie -->
                     <a href="#" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-100 hover:border-purple-500 hover:shadow-sm transition group">
                         <span class="text-3xl p-3 bg-purple-50 rounded-xl group-hover:bg-purple-100 transition">⏰</span>
                         <div>
@@ -118,12 +105,10 @@
                 </div>
             </div>
 
-            <!-- SECTION B : L'AGENDA EN DIRECT DE L'ÉCOLE (1 colonne à droite) -->
             <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
                 <h2 class="text-xl font-bold text-gray-800 mb-4">🗓️ Prochains Événements</h2>
                 
                 <div class="space-y-4">
-                    <!-- Événement 1 -->
                     <div class="flex items-start gap-4 pb-4 border-b border-gray-100">
                         <div class="bg-blue-600 text-white rounded-xl p-2 text-center min-w-[50px]">
                             <span class="block text-sm font-bold leading-none">06</span>
@@ -135,7 +120,6 @@
                         </div>
                     </div>
 
-                    <!-- Événement 2 -->
                     <div class="flex items-start gap-4 pb-4 border-b border-gray-100">
                         <div class="bg-green-600 text-white rounded-xl p-2 text-center min-w-[50px]">
                             <span class="block text-sm font-bold leading-none">20</span>
@@ -147,7 +131,6 @@
                         </div>
                     </div>
 
-                    <!-- Événement 3 -->
                     <div class="flex items-start gap-4">
                         <div class="bg-amber-500 text-white rounded-xl p-2 text-center min-w-[50px]">
                             <span class="block text-sm font-bold leading-none">18</span>
