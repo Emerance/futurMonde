@@ -1,0 +1,52 @@
+<!-- core/templates/core/dashboard.html -->
+{% extends 'core/base.html' %}
+
+{% block content %}
+<div class="row mb-4">
+    <div class="col">
+        <h1 class="display-5 fw-bold text-secondary">Tableau de Bord Administratif</h1>
+        <p class="text-muted">Bienvenue dans le système de gestion de l'établissement.</p>
+    </div>
+</div>
+
+<!-- Les cartes visuelles -->
+<div class="row g-4">
+    <!-- Carte 1 : ÉLÈVES -->
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 bg-white">
+            <div class="card-body text-center py-4">
+                <div class="fs-1 mb-2">🧑‍🎓</div>
+                <h5 class="card-title fw-bold text-primary">Gestion des Élèves</h5>
+                <p class="card-text text-muted small">Inscriptions, fiches élèves, listes des parents et contacts urgents.</p>
+                <!-- Dans core/templates/dashboard.html (ou dashboard.html selon votre choix précédent) -->
+                <a href="{% url 'students' %}" class="btn btn-primary btn-sm px-4 rounded-pill">Ouvrir l'application</a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Carte 2 : CLASSES & COURS -->
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 bg-white">
+            <div class="card-body text-center py-4">
+                <div class="fs-1 mb-2">🏢</div>
+                <h5 class="card-title fw-bold text-success">Classes & Emplois du Temps</h5>
+                <p class="card-text text-muted small">Configuration des niveaux, matières, salles et plannings de cours.</p>
+                <a href="#" class="btn btn-success btn-sm px-4 rounded-pill disabled">Bientôt disponible</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carte 3 : NOTES -->
+    <div class="col-md-4">
+        <div class="card border-0 shadow-sm h-100 bg-white">
+            <div class="card-body text-center py-4">
+                <div class="fs-1 mb-2">📝</div>
+                <h5 class="card-title fw-bold text-warning text-dark">Suivi des Notes</h5>
+                <p class="card-text text-muted small">Saisie des évaluations par les professeurs et édition des bulletins.</p>
+                <a href="#" class="btn btn-warning btn-sm px-4 rounded-pill text-dark disabled">Bientôt disponible</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

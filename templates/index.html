@@ -1,0 +1,170 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Accueil {% endblock %}
+
+{% block content %}
+
+    <!-- 2. BANDEAU CLIGNOTANT D'INFO URGENTE (100% sans CSS externe) -->
+    <div class="w-full max-w-[95%] mx-auto mt-4 p-4 bg-blue-50 rounded-2xl border border-blue-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+            <!-- Le signal lumineux clignotant -->
+            <span class="flex h-3 w-3 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-blue-600"></span>
+            </span>
+            <p class="text-sm text-blue-900 font-medium animate-pulse">
+                <span class="font-bold">Info Urgente :</span> Les inscriptions pour la sortie scolaire de fin d'année sont ouvertes !
+            </p>
+        </div>
+        <a href="#" class="text-xs text-blue-700 bg-white hover:bg-blue-100 px-3 py-1.5 rounded-xl font-bold transition shadow-sm border border-blue-200 whitespace-nowrap">
+            En savoir plus →
+        </a>
+    </div>
+
+    <!-- 3. SECTION HÉRO (Grande présentation de l'école) -->
+    <section class="w-full max-w-[95%] mx-auto mt-6 bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+        <div class="flex flex-col lg:flex-row items-center justify-between p-8 lg:p-16 gap-8">
+            <!-- Texte explicatif -->
+            <div class="w-full lg:w-1/2 text-center lg:text-left">
+                <span class="bg-amber-100 text-amber-800 font-bold px-4 py-1.5 rounded-full text-sm inline-block mb-4">
+                    🏫 Bienvenue à l'École Primaire
+                </span>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                    Grandir, apprendre et s'épanouir <span class="text-blue-600">ensemble</span>
+                </h1>
+                <p class="mt-4 text-gray-600 md:text-lg max-w-xl">
+                    Un cadre bienveillant, des projets innovants et une équipe dévouée pour offrir le meilleur avenir à vos enfants.
+                </p>
+                <div class="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
+                    <a href="#" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 hover:shadow-lg hover:-translate-y-0.5 transform transition-all duration-200 shadow-md shadow-blue-600/20">
+                        Inscrire mon enfant
+                    </a>
+                    <a href="#" class="px-6 py-3 bg-gray-50 text-gray-800 font-semibold rounded-xl hover:bg-gray-100 transition border border-gray-200">
+                        Notre projet d'école
+                    </a>
+                </div>
+            </div>
+            <!-- Illustration de la vie scolaire -->
+            <div class="w-full lg:w-1/2">
+                <img src="https://www.ecolechenee.be/wp-content/uploads/2023/04/groupe-eleves-primaire-travaillant-ensemble.jpg" 
+                     alt="Enfants heureux en classe" 
+                     class="w-full h-72 md:h-96 object-cover rounded-2xl shadow-md border-4 border-white">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION AVEC EFFET FOND FIGÉ (PARALLAXE) -->
+    <section class="w-full max-w-[95%] mx-auto mt-12 h-64 md:h-80 rounded-3xl relative overflow-hidden bg-cover bg-center bg-fixed shadow-inner" 
+            style="background-image: url('https://www.ecolechenee.be/wp-content/uploads/2023/04/groupe-eleves-primaire-travaillant-ensemble.jpg');">
+        
+        <!-- Voile sombre pour rendre le texte très lisible par-dessus l'image -->
+        <div class="absolute inset-0 bg-gray-900/40 backdrop-blur-[2px]"></div>
+
+        <!-- Contenu au centre de la bannière -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+            <h2 class="text-2xl md:text-4xl font-extrabold text-white drop-shadow-md">
+                Chaque jour est une nouvelle aventure
+            </h2>
+            <p class="text-white/90 mt-2 text-sm md:text-base max-w-lg font-medium drop-shadow-sm">
+                Découvrez comment nous aidons vos enfants à explorer leurs talents uniques.
+            </p>
+        </div>
+    </section>
+
+    <!-- 5. SECTION COMPLÉMENTAIRE : LES CHIFFRES CLÉS -->
+    <section class="w-full max-w-[95%] mx-auto mt-12 py-10 px-6 bg-white rounded-3xl shadow-sm border border-gray-100">
+        <div class="w-full max-w-[95%] mx-auto mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+            <!-- SECTION A : LES ACCÈS RAPIDES PARENTS (2 colonnes sur grand écran) -->
+            <div class="lg:col-span-2 space-y-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Espace Pratique des Parents</h2>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Lien Cantine -->
+                    <a href="#" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-100 hover:border-blue-500 hover:shadow-sm transition group">
+                        <span class="text-3xl p-3 bg-blue-50 rounded-xl group-hover:bg-blue-100 transition">📅</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Menu de la Cantine</h3>
+                            <p class="text-xs text-gray-500 mt-0.5">Consulter les repas de la semaine</p>
+                        </div>
+                    </a>
+
+                    <!-- Lien Calendrier -->
+                    <a href="#" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-100 hover:border-green-500 hover:shadow-sm transition group">
+                        <span class="text-3xl p-3 bg-green-50 rounded-xl group-hover:bg-green-100 transition">🎒</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Calendrier Scolaire</h3>
+                            <p class="text-xs text-gray-500 mt-0.5">Vacances, sorties et jours fériés</p>
+                        </div>
+                    </a>
+
+                    <!-- Lien Inscriptions -->
+                    <a href="#" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-100 hover:border-amber-500 hover:shadow-sm transition group">
+                        <span class="text-3xl p-3 bg-amber-50 rounded-xl group-hover:bg-amber-100 transition">📝</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Dossier d'Inscription</h3>
+                            <p class="text-xs text-gray-500 mt-0.5">Télécharger les pièces à fournir</p>
+                        </div>
+                    </a>
+
+                    <!-- Lien Horaires & Garderie -->
+                    <a href="#" class="flex items-center gap-4 p-4 bg-white rounded-2xl border border-gray-100 hover:border-purple-500 hover:shadow-sm transition group">
+                        <span class="text-3xl p-3 bg-purple-50 rounded-xl group-hover:bg-purple-100 transition">⏰</span>
+                        <div>
+                            <h3 class="font-bold text-gray-800">Horaires & Garderie</h3>
+                            <p class="text-xs text-gray-500 mt-0.5">Infos sur l'accueil matin et soir</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SECTION B : L'AGENDA EN DIRECT DE L'ÉCOLE (1 colonne à droite) -->
+            <div class="bg-white p-6 rounded-3xl border border-gray-100 shadow-sm">
+                <h2 class="text-xl font-bold text-gray-800 mb-4">🗓️ Prochains Événements</h2>
+                
+                <div class="space-y-4">
+                    <!-- Événement 1 -->
+                    <div class="flex items-start gap-4 pb-4 border-b border-gray-100">
+                        <div class="bg-blue-600 text-white rounded-xl p-2 text-center min-w-[50px]">
+                            <span class="block text-sm font-bold leading-none">06</span>
+                            <span class="text-[10px] uppercase font-semibold">Nov</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800">Réunion Parents-Enseignants</h4>
+                            <p class="text-xs text-gray-500 mt-0.5">À partir de 16h30 dans les classes respectives.</p>
+                        </div>
+                    </div>
+
+                    <!-- Événement 2 -->
+                    <div class="flex items-start gap-4 pb-4 border-b border-gray-100">
+                        <div class="bg-green-600 text-white rounded-xl p-2 text-center min-w-[50px]">
+                            <span class="block text-sm font-bold leading-none">20</span>
+                            <span class="text-[10px] uppercase font-semibold">Nov</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800">Sortie au Musée des Sciences</h4>
+                            <p class="text-xs text-gray-500 mt-0.5">Pour les classes de CE2, CM1 et CM2.</p>
+                        </div>
+                    </div>
+
+                    <!-- Événement 3 -->
+                    <div class="flex items-start gap-4">
+                        <div class="bg-amber-500 text-white rounded-xl p-2 text-center min-w-[50px]">
+                            <span class="block text-sm font-bold leading-none">18</span>
+                            <span class="text-[10px] uppercase font-semibold">Déc</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800">Arbre de Noël de l'école</h4>
+                            <p class="text-xs text-gray-500 mt-0.5">Spectacle des enfants et goûter collectif.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+
+{% endblock %}
